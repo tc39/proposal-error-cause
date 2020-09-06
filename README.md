@@ -16,12 +16,17 @@ implementations is another common approach. In that case, wrapping the caught
 error instance with a newly constructed error instance is a fairly useful
 method.
 
-For the first choice, no additional information were attached to the thrown
-error instances and as such analyzing such conditions can be clue lacking.
-
 ```js
 async function getSolution() {
-  const rawResource = await fetch('//domain/resource-a');
+  const rawResource = await fetch('//domain/resource-a')
+    .catch(err => {
+      // How to wrap the error properly?
+      // 1. throw new Error('Download raw resource failed: ' + err.message);
+      // 2. const wrapErr = new Error('Download raw resource failed');
+      //    wrapErr.cause = err;
+      //    throw wrapErr;
+      // 3. throw new CustomError('Download raw resource failed', err);
+    })
   const jobResult = doComputationalHeavyJob(rawResource);
   await fetch('//domain/upload', { method: 'POST', body: jobResult });
 }
