@@ -25,7 +25,13 @@ async function getSolution() {
       // 2. const wrapErr = new Error('Download raw resource failed');
       //    wrapErr.cause = err;
       //    throw wrapErr;
-      // 3. throw new CustomError('Download raw resource failed', err);
+      // 3. class CustomError {
+      //      constructor(msg, cause) {
+      //        super(msg);
+      //        this.cause = cause;
+      //      }
+      //    }
+      //    throw new CustomError('Download raw resource failed', err);
     })
   const jobResult = doComputationalHeavyJob(rawResource);
   await fetch('//domain/upload', { method: 'POST', body: jobResult });
@@ -40,8 +46,10 @@ pattern. However, if the errors were chained with causes, it can be greatly
 helpful to diagnosing unexpected exceptions.
 
 The proposed solution is adding an additional parameter `cause` to the
-`Error()` constructor, so that errors can be chained without unnecessary
-and overelaborate formalities on wrapping the errors in conditions.
+`Error()` constructor, and the value of the parameter will be assigned to
+the error instances as a property. So errors can be chained without 
+unnecessary and overelaborate formalities on wrapping the errors in 
+conditions.
 
 ```js
 async function doJob() {
