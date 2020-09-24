@@ -2,6 +2,10 @@
 
 Status: Stage 1
 
+Author: [@legendecas](https://github.com/legendecas)
+
+Champion: [@hemanth](https://github.com/hemanth)
+
 ## Chaining Errors
 
 Errors will be constructed to represent runtime abnormalities. To help
