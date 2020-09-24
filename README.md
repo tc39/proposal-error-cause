@@ -1,6 +1,6 @@
 # Error Cause
 
-This proposal has not yet been presented to TC39 plenary meetings.
+Status: Stage 1
 
 ## Chaining Errors
 
