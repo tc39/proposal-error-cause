@@ -4,7 +4,7 @@ Status: Stage 1
 
 Author: [@legendecas](https://github.com/legendecas)
 
-Champion: [@hemanth](https://github.com/hemanth), [@legendecas](https://github.com/legendecas)
+Champion: [@legendecas](https://github.com/legendecas), [@hemanth](https://github.com/hemanth)
 
 ## Chaining Errors
 
