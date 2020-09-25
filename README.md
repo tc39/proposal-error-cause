@@ -83,3 +83,24 @@ assigned to newly constructed error instances with the name `fileName` and
 `lineNumber` respectively.
 
 However, no standard on either ECMAScript or Web were defined on such behavior.
+
+## FAQs
+
+### Differences with `AggregateError`
+
+The key difference between those two is that the errors in the `AggregateError`
+doesn't have to be related. `AggregateError` are just a bunch of errors just
+happened to be caught and aggregated in one place, they can be totally
+unrelated. E.g. `jobA` and `jobB` can do nothing to each other in
+`Promise.allSettled(jobA, jobB)`. However, if an error were thrown from
+several levels deep of `jobA`, the `cause` property can accumulate context
+information of those levels to help understanding what happened exactly.
+
+With `AggregateError`, we get breadth. With the `cause` property, we get depth.
+
+### Why not custom subclasses of `Error`
+
+While there are lots of ways to achieve the behavior of the proposal, if the
+`cause` property is explicitly defined by the language, debug tooling can
+reliably use this info rather than contracting with developers to construct an
+error properly.
