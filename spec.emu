@@ -6,7 +6,7 @@
 <pre class="metadata">
 title: Error Cause
 stage: 1
-contributors: Chengzhong Wu, Ecma International
+contributors: Chengzhong Wu, Hemanth HM, Ecma International
 </pre>
 
 <style>
@@ -74,6 +74,18 @@ contributors: Chengzhong Wu, Ecma International
         </emu-alg>
       </emu-clause>
 
+    </emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-properties-of-the-error-prototype-object">
+      <h1>Properties of the Error Prototype Object</h1>
+        <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+        <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+        <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+        <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+        <emu-clause id="sec-error.prototype.cause">
+        <h1>Error.prototype.cause</h1>
+        <p>The initial value of <code>Error.prototype.cause</code> is the empty String.</p>
+      </emu-clause>
     </emu-clause>
   </emu-clause>
 </emu-clause>
