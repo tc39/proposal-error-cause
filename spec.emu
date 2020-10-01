@@ -84,7 +84,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
         <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
         <emu-clause id="sec-error.prototype.cause">
         <h1>Error.prototype.cause</h1>
-        <p>The initial value of <code>Error.prototype.cause</code> is the empty String.</p>
+        <p>The initial value of `Error.prototype.cause` is the empty String.</p>
       </emu-clause>
     </emu-clause>
   </emu-clause>
