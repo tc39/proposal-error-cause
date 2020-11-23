@@ -56,7 +56,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
       <h1>The Error Constructor</h1>
 
       <emu-clause id="sec-error-message">
-        <h1>Error ( _message_, _cause_ )</h1>
+        <h1>Error ( _message_ [ , _cause_ ] )</h1>
 
         <p>When the `Error` function is called with argument _message_ and _cause_, the following steps are taken:</p>
 
