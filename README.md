@@ -15,7 +15,7 @@ happened at the time.
 
 If the error were thrown from deep internal methods, the thrown error may not
 be straightforward to be easily conducted without proper exception design
-pattern. Catching an error and re-thrown it with specialized contextual data is
+pattern. Catching an error and throwing it with additional contextual data is
 a common approach of error handling pattern. Multiple methods are available to
 augment the caught error with additional contextual information:
 
@@ -45,10 +45,10 @@ await doJob(); // => TypeError: Failed to fetch
 
 If the errors were chained with causes, it can be greatly helpful to diagnosing
 unexpected exceptions. As the example above shows, quite a few laboring works
-has to be done for a simple error handling case to augmenting the re-thrown
-error with the cause. Besides, no consensus on which property will representing
-the cause makes it not feasible for developer tools to revealing contextual
-information of causes.
+has to be done for a simple error handling case to augmenting the caught
+error with contextual message. Besides, no consensus on which property will
+representing the cause makes it not feasible for developer tools to revealing
+contextual information of causes.
 
 The proposed solution is adding an additional parameter `cause` to the
 `Error()` constructor, and the value of the parameter will be assigned to
