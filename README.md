@@ -96,7 +96,7 @@ The key difference between those two is that the errors in the `AggregateError`
 doesn't have to be related. `AggregateError` are just a bunch of errors just
 happened to be caught and aggregated in one place, they can be totally
 unrelated. E.g. `jobA` and `jobB` can do nothing to each other in
-`Promise.allSettled(jobA, jobB)`. However, if an error were thrown from
+`Promise.allSettled([ jobA, jobB ])`. However, if an error were thrown from
 several levels deep of `jobA`, the `cause` property can accumulate context
 information of those levels to help understanding what happened exactly.
 
