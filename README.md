@@ -50,9 +50,9 @@ error with contextual message. Besides, no consensus on which property will
 representing the cause makes it not feasible for developer tools to revealing
 contextual information of causes.
 
-The proposed solution is adding an additional parameter `cause` to the
-`Error()` constructor, and the value of the parameter will be assigned to
-the error instances as a property. So errors can be chained without
+The proposed solution is adding an additional options parameter to the `Error()`
+constructor with a `cause` property, the value of which will be assigned
+to the error instances as a property. So errors can be chained without
 unnecessary and overelaborate formalities on wrapping the errors in
 conditions.
 
@@ -60,12 +60,12 @@ conditions.
 async function doJob() {
   const rawResource = await fetch('//domain/resource-a')
     .catch(err => {
-      throw new Error('Download raw resource failed', err);
+      throw new Error('Download raw resource failed', { cause: err });
     });
   const jobResult = doComputationalHeavyJob(rawResource);
   await fetch('//domain/upload', { method: 'POST', body: jobResult })
     .catch(err => {
-      throw new Error('Upload job result failed', err);
+      throw new Error('Upload job result failed', { cause: err });
     });
 }
 
@@ -87,6 +87,8 @@ assigned to newly constructed error instances with the name `fileName` and
 `lineNumber` respectively.
 
 However, no standard on either ECMAScript or Web were defined on such behavior.
+Since the second parameter under this proposal must be an object with a `cause`
+property, it will be distinguishable from a string.
 
 ## FAQs
 
