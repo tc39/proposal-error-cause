@@ -29,19 +29,65 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 
+<emu-clause id="sec-abstract-operations">
+  <h1>Abstract Operations</h1>
+  <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+  <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+  <emu-clause id="sec-operations-on-objects">
+    <h1>Operations on Objects</h1>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+    <emu-clause id="sec-getoption">
+        <h1><ins>GetOption ( _options_, _property_ )</ins></h1>
+        <p><ins>The abstract operation GetOption extracts the value of the property named _property_ from the provided _options_ object.</ins></p>
+        <emu-alg>
+          1. <ins>If Type(_options_) is not Object, then</ins>
+            1. <ins>Return *undefined*.</ins>
+          1. <ins>Let _value_ be ? Get(_options_, _property_).</ins>
+          1. <ins>Return _value_.</ins>
+        </emu-alg>
+    </emu-clause>
+  </emu-clause>
+
+
+</emu-clause>
+
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 
 <emu-clause id="sec-fundamental-objects">
   <h1>Fundamental Objects</h1>
@@ -56,9 +102,9 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
       <h1>The Error Constructor</h1>
 
       <emu-clause id="sec-error-message">
-        <h1>Error ( _message_<ins> [ , _cause_ ]</ins> )</h1>
+        <h1>Error ( _message_<ins> [ , _options_ ]</ins> )</h1>
 
-        <p>When the `Error` function is called with argument _message_<ins> and _cause_</ins>, the following steps are taken:</p>
+        <p>When the `Error` function is called with argument _message_<ins> and _options_</ins>, the following steps are taken:</p>
 
         <emu-alg>
           1. If NewTarget is *undefined*, let _newTarget_ be the active function object; else let _newTarget_ be NewTarget.
@@ -67,6 +113,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
             1. Let _msg_ be ? ToString(_message_).
             1. Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.
             1. Perform ! DefinePropertyOrThrow(_O_, `"message"`, _msgDesc_).
+          1. <ins>Let _cause_ be ? GetOption(_options_, `"cause"`)</ins>
           1. <ins>If _cause_ is not *undefined*, then</ins>
             1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
             1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
@@ -86,8 +133,8 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
         <h1>The _NativeError_ Constructors</h1>
 
         <emu-clause id="sec-nativeerror">
-          <h1>_NativeError_ ( _message_<ins> [ , _cause_ ]</ins> )</h1>
-          <p>When a _NativeError_ function is called with argument _message_<ins> and _cause_</ins>, the following steps are taken:</p>
+          <h1>_NativeError_ ( _message_<ins> [ , _options_ ]</ins> )</h1>
+          <p>When a _NativeError_ function is called with argument _message_<ins> and _options_</ins>, the following steps are taken:</p>
           <emu-alg>
             1. If NewTarget is *undefined*, let _newTarget_ be the active function object; else let _newTarget_ be NewTarget.
             1. [id="step-nativerror-ordinarycreatefromconstructor"] Let _O_ be ? OrdinaryCreateFromConstructor(_newTarget_, <code>"%<var>NativeError</var>.prototype%"</code>, &laquo; [[ErrorData]] &raquo;).
@@ -95,6 +142,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
               1. Let _msg_ be ? ToString(_message_).
               1. Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.
               1. Perform ! DefinePropertyOrThrow(_O_, *"message"*, _msgDesc_).
+            1. <ins>Let _cause_ be ? GetOption(_options_, `"cause"`)</ins>
             1. <ins>If _cause_ is not *undefined*, then</ins>
               1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
               1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
@@ -112,8 +160,8 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
         <h1>The AggregateError Constructor</h1>
 
         <emu-clause id="sec-aggregate-error">
-          <h1>AggregateError ( _errors_, _message_<ins> [ , _cause_ ]</ins> )</h1>
-          <p>When the *AggregateError* function is called with arguments _errors_<del> and</del><ins>,</ins> _message_<ins>, and _cause_</ins>, the following steps are taken:</p>
+          <h1>AggregateError ( _errors_, _message_<ins> [ , _options_ ]</ins> )</h1>
+          <p>When the *AggregateError* function is called with arguments _errors_<del> and</del><ins>,</ins> _message_<ins>, and _options_</ins>, the following steps are taken:</p>
           <emu-alg>
             1. If NewTarget is *undefined*, let _newTarget_ be the active function object; else let _newTarget_ be NewTarget.
             1. Let _O_ be ? OrdinaryCreateFromConstructor(_newTarget_, *"%AggregateError.prototype%"*, &laquo; [[ErrorData]] &raquo;).
@@ -121,6 +169,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
               1. Let _msg_ be ? ToString(_message_).
               1. Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.
               1. Perform ! DefinePropertyOrThrow(_O_, *"message"*, _msgDesc_).
+            1. <ins>Let _cause_ be ? GetOption(_options_, `"cause"`)</ins>
             1. <ins>If _cause_ is not *undefined*, then</ins>
               1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
               1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
