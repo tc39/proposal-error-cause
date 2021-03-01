@@ -29,53 +29,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-
-<emu-clause id="sec-abstract-operations">
-  <h1>Abstract Operations</h1>
-  <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-  <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-  <emu-clause id="sec-operations-on-objects">
-    <h1>Operations on Objects</h1>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
-    <emu-clause id="sec-getoption">
-        <h1><ins>GetOption ( _options_, _property_ )</ins></h1>
-        <p><ins>The abstract operation GetOption extracts the value of the property named _property_ from the provided _options_ object.</ins></p>
-        <emu-alg>
-          1. <ins>If Type(_options_) is not Object, then</ins>
-            1. <ins>Return *undefined*.</ins>
-          1. <ins>Let _value_ be ? Get(_options_, _property_).</ins>
-          1. <ins>Return _value_.</ins>
-        </emu-alg>
-    </emu-clause>
-  </emu-clause>
-
-
-</emu-clause>
-
+<emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
@@ -113,10 +67,11 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
             1. Let _msg_ be ? ToString(_message_).
             1. Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.
             1. Perform ! DefinePropertyOrThrow(_O_, `"message"`, _msgDesc_).
-          1. <ins>Let _cause_ be ? GetOption(_options_, `"cause"`)</ins>
-          1. <ins>If _cause_ is not *undefined*, then</ins>
-            1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
-            1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
+          1. <ins>If Type(_options_) is Object, then</ins>
+            1. <ins>If ? HasProperty(_options_, `"cause"`) is *true*, then</ins>
+              1. <ins>Let _cause_ be ? Get(_options_, `"cause"`)</ins>
+              1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
+              1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
           1. Return O.
         </emu-alg>
       </emu-clause>
@@ -142,10 +97,11 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
               1. Let _msg_ be ? ToString(_message_).
               1. Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.
               1. Perform ! DefinePropertyOrThrow(_O_, *"message"*, _msgDesc_).
-            1. <ins>Let _cause_ be ? GetOption(_options_, `"cause"`)</ins>
-            1. <ins>If _cause_ is not *undefined*, then</ins>
-              1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
-              1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
+            1. <ins>If Type(_options_) is Object, then</ins>
+              1. <ins>If ? HasProperty(_options_, `"cause"`) is *true*, then</ins>
+                1. <ins>Let _cause_ be ? Get(_options_, `"cause"`)</ins>
+                1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
+                1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
             1. Return _O_.
           </emu-alg>
           <p>The actual value of the string passed in step <emu-xref href="#step-nativerror-ordinarycreatefromconstructor"></emu-xref> is either *"%EvalError.prototype%"*, *"%RangeError.prototype%"*, *"%ReferenceError.prototype%"*, *"%SyntaxError.prototype%"*, *"%TypeError.prototype%"*, or *"%URIError.prototype%"* corresponding to which _NativeError_ constructor is being defined.</p>
@@ -169,10 +125,11 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
               1. Let _msg_ be ? ToString(_message_).
               1. Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.
               1. Perform ! DefinePropertyOrThrow(_O_, *"message"*, _msgDesc_).
-            1. <ins>Let _cause_ be ? GetOption(_options_, `"cause"`)</ins>
-            1. <ins>If _cause_ is not *undefined*, then</ins>
-              1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
-              1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
+            1. <ins>If Type(_options_) is Object, then</ins>
+              1. <ins>If ? HasProperty(_options_, `"cause"`) is *true*, then</ins>
+                1. <ins>Let _cause_ be ? Get(_options_, `"cause"`)</ins>
+                1. <ins>Let _causeDesc_ be the PropertyDescriptor { [[Value]]: _cause_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
+                1. <ins>Perform ! DefinePropertyOrThrow(_O_, `"cause"`, _causeDesc_).</ins>
             1. Let _errorsList_ be ? IterableToList(_errors_).
             1. Perform ! DefinePropertyOrThrow(_O_, *"errors"*, PropertyDescriptor { [[Configurable]]: *true*, [[Enumerable]]: *false*, [[Writable]]: *true*, [[Value]]: ! CreateArrayFromList(_errorsList_) }).
             1. Return _O_.
