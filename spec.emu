@@ -161,7 +161,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
 
       <emu-clause id="sec-errorobjects-extract-error-cause">
         <h1><ins>ExtractErrorCause ( _O_, _options_ )</ins></h1>
-        <p><ins>The abstract operation ExtractErrorCause takes argument _O_ and _options_. It is used to create `"cause"` property on _O_ when the `"cause"` property is present on _options_. It performs the following steps when called:</ins></p>
+        <p><ins>The abstract operation ExtractErrorCause takes arguments _O_ and _options_. It is used to create `"cause"` property on _O_ when the `"cause"` property is present on _options_. It performs the following steps when called:</ins></p>
         <emu-alg>
           1. <ins>Assert: Type(_O_) is Object.</ins>
           1. <ins>If Type(_options_) is Object and ? HasProperty(_options_, `"cause"`) is *true*, then</ins>
