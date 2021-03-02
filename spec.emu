@@ -167,7 +167,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
           1. <ins>If Type(_options_) is Object and ? HasProperty(_options_, `"cause"`) is *true*, then</ins>
             1. <ins>Let _cause_ be ? Get(_options_, `"cause"`)</ins>
             1. <ins>Perform ! CreateNonEnumerableDataProperty(_O_, `"cause"`, _cause_).</ins>
-          1. <ins>Return *undefined*.</ins>
+          1. <ins>Return NormalCompletion(*undefined*).</ins>
         </emu-alg>
       </emu-clause>
     </emu-clause>
