@@ -43,15 +43,16 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
     <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
     <emu-clause id="sec-placeholder"><h1>Placeholder to ensure correct clause numbering</h1></emu-clause>
 
-    <emu-clause id="sec-createnonenumerabledatapropertyorthrow">
-      <h1><ins>CreateNonEnumerableDataPropertyOrThrow ( _O_, _P_, _V_ )</ins></h1>
-      <p><ins>The abstract operation CreateNonEnumerableDataPropertyOrThrow takes arguments _O_ (an Object), _P_ (a Property Key), and _V_ (an ECMAScript language value). It is used to create a new non-enumerable own property of an object. It throws a *TypeError* exception if the requested property update cannot be performed. It performs the following steps when called:</ins></p>
+    <emu-clause id="sec-createnonenumerabledataproperty">
+      <h1><ins>CreateNonEnumerableDataProperty ( _O_, _P_, _V_ )</ins></h1>
+      <p><ins>The abstract operation CreateNonEnumerableDataProperty takes arguments _O_ (an Object), _P_ (a property key), and _V_ (an ECMAScript language value). It performs the following steps when called:</ins></p>
       <emu-alg>
+        1. <ins>Assert: Type(_O_) is Object.</ins>
+        1. <ins>Assert: IsPropertyKey(_P_) is true.</ins>
         1. <ins>Let _newDesc_ be the PropertyDescriptor { [[Value]]: _V_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</ins>
-        1. <ins>Return ? DefinePropertyOrThrow(_O_, _P_, _newDesc_).</ins>
+        1. <ins>Return ! DefinePropertyOrThrow(_O_, _P_, _newDesc_).</ins>
       </emu-alg>
     </emu-clause>
-    <emu-note>This abstract operation creates a property whose attributes are set to the same defaults used for properties created by the ECMAScript language assignment operator except they are not enumerable. Normally, the property will not already exist. If it does exist and is not configurable or if _O_ is not extensible, [[DefineOwnProperty]] will return *false* causing this operation to throw a *TypeError* exception.</emu-note>
   </emu-clause>
 </emu-clause>
 
@@ -92,7 +93,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
             1. Let _msg_ be ? ToString(_message_).
             1. <del>Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</del>
             1. <del>Perform ! DefinePropertyOrThrow(_O_, *"message"*, _msgDesc_).</del>
-            1. <ins>Perform ! CreateNonEnumerableDataPropertyOrThrow(_O_, *"message"*, _msg_).</ins>
+            1. <ins>Perform CreateNonEnumerableDataProperty(_O_, *"message"*, _msg_).</ins>
           1. <ins>Perform ? InstallErrorCause(_O_, _options_). </ins>
           1. Return O.
         </emu-alg>
@@ -119,7 +120,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
               1. Let _msg_ be ? ToString(_message_).
               1. <del>Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</del>
               1. <del>Perform ! DefinePropertyOrThrow(_O_, *"message"*, _msgDesc_).</del>
-              1. <ins>Perform ! CreateNonEnumerableDataPropertyOrThrow(_O_, *"message"*, _msg_).</ins>
+              1. <ins>Perform CreateNonEnumerableDataProperty(_O_, *"message"*, _msg_).</ins>
             1. <ins>Perform ? InstallErrorCause(_O_, _options_). </ins>
             1. Return _O_.
           </emu-alg>
@@ -144,7 +145,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
               1. Let _msg_ be ? ToString(_message_).
               1. <del>Let _msgDesc_ be the PropertyDescriptor { [[Value]]: _msg_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</del>
               1. <del>Perform ! DefinePropertyOrThrow(_O_, *"message"*, _msgDesc_).</del>
-              1. <ins>Perform ! CreateNonEnumerableDataPropertyOrThrow(_O_, *"message"*, _msg_).</ins>
+              1. <ins>Perform CreateNonEnumerableDataProperty(_O_, *"message"*, _msg_).</ins>
             1. <ins>Perform ? InstallErrorCause(_O_, _options_). </ins>
             1. Let _errorsList_ be ? IterableToList(_errors_).
             1. Perform ! DefinePropertyOrThrow(_O_, *"errors"*, PropertyDescriptor { [[Configurable]]: *true*, [[Enumerable]]: *false*, [[Writable]]: *true*, [[Value]]: ! CreateArrayFromList(_errorsList_) }).
@@ -164,7 +165,7 @@ contributors: Chengzhong Wu, Hemanth HM, Ecma International
         <emu-alg>
           1. <ins>If Type(_options_) is Object and ? HasProperty(_options_, `"cause"`) is *true*, then</ins>
             1. <ins>Let _cause_ be ? Get(_options_, `"cause"`).</ins>
-            1. <ins>Perform ! CreateNonEnumerableDataPropertyOrThrow(_O_, `"cause"`, _cause_).</ins>
+            1. <ins>Perform CreateNonEnumerableDataProperty(_O_, `"cause"`, _cause_).</ins>
           1. <ins>Return NormalCompletion(*undefined*).</ins>
         </emu-alg>
       </emu-clause>
