@@ -28,7 +28,7 @@ async function getSolution() {
       // 2. const wrapErr = new Error('Download raw resource failed');
       //    wrapErr.cause = err;
       //    throw wrapErr;
-      // 3. class CustomError {
+      // 3. class CustomError extends Error {
       //      constructor(msg, cause) {
       //        super(msg);
       //        this.cause = cause;
