@@ -20,7 +20,7 @@ a common approach of error handling pattern. Multiple methods are available to
 augment the caught error with additional contextual information:
 
 ```js
-async function getSolution() {
+async function doJob() {
   const rawResource = await fetch('//domain/resource-a')
     .catch(err => {
       // How to wrap the error properly?
