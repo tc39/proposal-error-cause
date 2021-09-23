@@ -90,6 +90,18 @@ However, no standard on either ECMAScript or Web were defined on such behavior.
 Since the second parameter under this proposal must be an object with a `cause`
 property, it will be distinguishable from a string.
 
+## Implementations
+
+Polyfills:
+- [error-cause](https://www.npmjs.com/package/error-cause): An [es-shim] interface polyfill.
+- [Pony Cause](https://github.com/voxpelli/pony-cause): Helpers to work with ECMAScript error cause and [VError] style error cause.
+
+JavaScript Environments:
+- Chrome, released on 93,
+- Firefox, released on 91,
+- Safari, released on 15,
+- Node.js, released on [v16.9.0](https://nodejs.org/en/blog/release/v16.9.0/#error-cause).
+
 ## FAQs
 
 ### Differences with `AggregateError`
@@ -111,7 +123,5 @@ While there are lots of ways to achieve the behavior of the proposal, if the
 reliably use this info rather than contracting with developers to construct an
 error properly.
 
-## Implementations
-
-- Polyfills:
-  - [es-shims](https://npmjs.com/error-cause) 
+[es-shim]: https://github.com/es-shims/api
+[VError]: https://github.com/joyent/node-verror
