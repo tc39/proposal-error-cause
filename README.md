@@ -110,3 +110,8 @@ While there are lots of ways to achieve the behavior of the proposal, if the
 `cause` property is explicitly defined by the language, debug tooling can
 reliably use this info rather than contracting with developers to construct an
 error properly.
+
+## Implementations
+
+- Polyfills:
+  - [es-shims](https://npmjs.com/error-cause) 
